@@ -9,6 +9,11 @@
 
 body {
     min-height: 100vh;
+    background: #666666;
+}
+
+section{
+    height: 100vh;
 }
 
 .header{
@@ -23,11 +28,16 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
 }
 
-.logo{
+.titolo{
     text-decoration: none;
     color: #e0e0e0;
-    font-weight: 700;
+    text-align: center;
+}
+
+h1{
     font-size: large;
+    font-weight: 700;
+    margin-bottom: 0;
 }
 
 .check{
@@ -93,26 +103,83 @@ body {
 
 .chisono{
     width: 100%;
-    margin-top: 69px;
     display: flex;
     background-color: #666666;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
+    padding: 7rem 0;
 }
 
-img{
-    width: 60%;
+.miaimg{
+    width: 50%;
     border-radius: 50%;
-    display: block;
-}
-
-
-h1{
-    color: #fff;
+    margin-top: 2rem;
 }
 
 .descchisono{
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.logo{
+    width: 25%;
+}
+
+.contenitore1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.contenitore2{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   height: 45%;
+}
+
+.skills {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2{
+    color: #fff;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.barra {
+  width: 100%;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.riempimento {
+  height: 100%;
+  width: 0;
+  background: #2196F3;
+  border-radius: 10px;
+  transition: width 1.5s ease;
+}
+
+span{
     color: #fff;
 }
 
@@ -147,11 +214,34 @@ h1{
     .chisono{
         display: flex;
         flex-direction: row;
+        margin-top: 0px;
+        padding: 0 1rem;
     }
 
-    img{
+    .miaimg{
         width: 25%;
     }
+
+    .contenitore1{
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+    }
+
+    .contenitore2{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+    }
+
+    .logo{
+        width: 18%;
+        padding: 2rem 0;
+    }
+
 }
 
 @media (min-width: 950px){

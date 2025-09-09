@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Ion Roabes</a>
+        <a href="#" class="titolo"> <h1>Ion Roabes</h1></a>
 
         <input type="checkbox" class="check" id="check">
         <label for="check" class="icons">
@@ -20,23 +20,48 @@
 
         <nav class="navbar">
             <a href="#chisono">Chi sono</a>
-            <a href="#">Skill</a>
+            <a href="#skills">Skills</a>
             <a href="#">Lavori</a>
             <a href="#">Contattami</a>
         </nav>
     </header>
 
     <section class="chisono" id="chisono">
-        <img src="img/logo.png" alt="miaimmagine">
+        <div class="contenitore1">
+            <img src="img/foto.png" alt="miaimmagine" class="miaimg">
+            <div class="contenitore2">
+                <img src="img/logo2.png" alt="ionroabes" class="logo">
+                <p class="descchisono">Sviluppatore Full Stack orientato alla creazione di applicazioni performanti e intuitive. Unisco logica e design per realizzare progetti che rispondono alle esigenze del business e offrono un’ottima esperienza utente.</p>
+            </div>
+        </div>
+    </section>
 
-        <h1>Ion Roabes</h1>
-        <p class="descchisono">Approccio orientato alla crescita continua e al lavoro di squadra, con la motivazione di contribuire a progetti innovativi e di valore.</p>
-
+    <section class="skills" id="skills">
+        <h2>SKILLS</h2>
+        <p class="descchisono">(in evoluzione)</p>
+        <div class="skill">
+            <span>HTML</span>
+            <div class="barra">
+                <div class="riempimento" data-percent="100"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>CSS</span>
+            <div class="barra">
+                <div class="riempimento" data-percent="85"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="barra">
+                <div class="riempimento" data-percent="15"></div>
+            </div>
+        </div>
     </section>
     
 
 
-
+<script src="script.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 
 </body>
