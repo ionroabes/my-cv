@@ -34,6 +34,10 @@ section{
     text-align: center;
 }
 
+.titolo:hover{
+    color: #fff;
+}
+
 h1{
     font-size: large;
     font-weight: 700;
@@ -181,6 +185,31 @@ h2{
 
 span{
     color: #fff;
+}
+
+.lavori{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitore3{
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    padding: 2%;
+    background: #444444;
+    color: #fff;
+}
+
+.contenitore3 a{
+    text-decoration: none;
 }
 
 @media (min-width: 800px){
