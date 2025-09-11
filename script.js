@@ -77,3 +77,9 @@ window.addEventListener("wheel", (e) => {
   setTimeout(() => isScrolling = false, 1000); // evita scroll multipli
 });
 
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", function(e) {
+  status.textContent = "Invio in corso...";
+});

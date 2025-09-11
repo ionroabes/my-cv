@@ -22,7 +22,7 @@
             <a href="#chisono">Chi sono</a>
             <a href="#skills">Skills</a>
             <a href="#lavori">Lavori</a>
-            <a href="#">Contattami</a>
+            <a href="#contattami">Contattami</a>
         </nav>
     </header>
 
@@ -98,6 +98,19 @@
 
     </section>
     
+    <section id="contattami" class="contattami">
+        <h2>Contattami</h2>
+        <form action="https://formsubmit.co/tuoaccount@gmail.com" method="POST" id="contact-form">
+            <input type="text" name="name" placeholder="Il tuo nome" required>
+            <input type="email" name="email" placeholder="La tua email" required>
+            <textarea name="message" placeholder="Il tuo messaggio" required></textarea>
+            <button type="submit">Invia</button>
+
+    <!-- Opzionali per protezione e redirect -->
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+        <p id="form-status"></p>
+        </section>
 
 
 <script src="script.js"></script>
