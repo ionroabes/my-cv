@@ -93,10 +93,6 @@ h1{
     height: 10.8rem;
 }
 
-#check:checked~.header{
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
-}
-
 #check:checked+ label #menu-check{
     display: none;
 }
@@ -188,7 +184,7 @@ span{
 }
 
 .lavori{
-    padding: 2rem 0;
+    padding-top: 7%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -199,18 +195,31 @@ span{
     width: 80%;
     margin-top: 2rem;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card{
     padding: 2%;
     background: #444444;
     color: #fff;
+    height: 100%;
+    width: 100%;
+    max-width: 18rem;
 }
 
 .contenitore3 a{
     text-decoration: none;
+    font-size: small;
+    height: 32%;
 }
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 @media (min-width: 800px){
     .icons{
@@ -269,6 +278,16 @@ span{
     .logo{
         width: 18%;
         padding: 2rem 0;
+    }
+
+    .contenitore3{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contenitore3 a{
+        height: 100%;
     }
 
 }

@@ -4,7 +4,7 @@ function deselezionaCheckbox() {
     checkbox.checked = false;
 }
 
-// Media query per larghezze minori di 950px
+// Media query per larghezze minori di 800px
 window.addEventListener('resize', function () {
     if (window.innerWidth > 800) {
         deselezionaCheckbox(); // Deselezioniamo la checkbox
