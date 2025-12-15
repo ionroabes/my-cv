@@ -267,6 +267,10 @@ span{
   background-color: #1976d2;
 }
 
+.contenitore3.link{
+    flex-direction: row;
+}
+
 .contenitore3.link a{
   height: auto !important;
 }
