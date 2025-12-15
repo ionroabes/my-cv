@@ -58,24 +58,42 @@ const observer = new IntersectionObserver(entries => {
 
 riempimenti.forEach(bar => observer.observe(bar));
 
-const sections = document.querySelectorAll("section");
+const sections = Array.from(document.querySelectorAll("section"));
 let index = 0;
 let isScrolling = false;
 
+// aggiorna index in base a dove sei davvero
+function syncIndexToViewport() {
+  const y = window.scrollY + window.innerHeight / 2;
+  index = sections.findIndex(sec => {
+    const top = sec.offsetTop;
+    const bottom = top + sec.offsetHeight;
+    return y >= top && y < bottom;
+  });
+  if (index === -1) index = 0;
+}
+
+window.addEventListener("scroll", () => {
+  if (!isScrolling) syncIndexToViewport();
+});
+
 window.addEventListener("wheel", (e) => {
+  // se stai usando un input "strano" (touchpad), evita blocchi aggressivi
+  if (Math.abs(e.deltaY) < 10) return;
+
+  e.preventDefault(); // IMPORTANTISSIMO
   if (isScrolling) return;
   isScrolling = true;
 
-  if (e.deltaY > 0 && index < sections.length - 1) {
-    index++;
-  } else if (e.deltaY < 0 && index > 0) {
-    index--;
-  }
+  syncIndexToViewport();
+
+  if (e.deltaY > 0 && index < sections.length - 1) index++;
+  else if (e.deltaY < 0 && index > 0) index--;
 
   sections[index].scrollIntoView({ behavior: "smooth" });
 
-  setTimeout(() => isScrolling = false, 1000); // evita scroll multipli
-});
+  setTimeout(() => (isScrolling = false), 900);
+}, { passive: false });
 
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");

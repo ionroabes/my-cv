@@ -26,6 +26,7 @@ section{
     align-items: center;
     background: #333;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    z-index: 9999;
 }
 
 .titolo{
@@ -72,6 +73,7 @@ h1{
 
 .navbar a:hover{
     background: rgba(0, 0, 0, .2);
+    color: #fff;
 }
 
 .navbar{
