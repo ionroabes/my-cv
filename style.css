@@ -267,8 +267,15 @@ span{
   background-color: #1976d2;
 }
 
-.link img{
-    height: 3rem;
+.contenitore3.link a{
+  height: auto !important;
+}
+
+.contenitore3.link img{
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+  display: block;
 }
 
 
