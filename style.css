@@ -267,6 +267,10 @@ span{
   background-color: #1976d2;
 }
 
+.link img{
+    height: 3rem;
+}
+
 
 @media (min-width: 800px){
     .icons{
