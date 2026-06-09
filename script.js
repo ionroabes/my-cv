@@ -95,6 +95,30 @@ window.addEventListener("wheel", (e) => {
   setTimeout(() => (isScrolling = false), 900);
 }, { passive: false });
 
+let touchStartY = 0;
+
+window.addEventListener("touchstart", (e) => {
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+window.addEventListener("touchend", (e) => {
+  if (isScrolling) return;
+
+  const deltaY = touchStartY - e.changedTouches[0].clientY;
+
+  if (Math.abs(deltaY) < 30) return; // swipe troppo corto, ignora
+
+  isScrolling = true;
+  syncIndexToViewport();
+
+  if (deltaY > 0 && index < sections.length - 1) index++;
+  else if (deltaY < 0 && index > 0) index--;
+
+  sections[index].scrollIntoView({ behavior: "smooth" });
+
+  setTimeout(() => (isScrolling = false), 900);
+}, { passive: true });
+
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
